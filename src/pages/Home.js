@@ -11,7 +11,7 @@ import {
   FaDatabase,
   FaDev,
 } from 'react-icons/fa';
-import Chart from 'chart.js/auto'; // Importe o Chart.js com o módulo 'auto' para suporte a todos os gráficos
+import Chart from 'chart.js/auto'; 
 
 const Home = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -37,7 +37,7 @@ const Home = () => {
     setSelectedCard(null);
   };
 
-  // Função para renderizar o conteúdo do modal com base no card selecionado
+  // Função para renderizar o conteúdo do modal com base em qual card foi clicado
   const renderModalContent = () => {
     if (selectedCard) {
       return (
@@ -56,7 +56,7 @@ const Home = () => {
     return null;
   };
 
-  // Configuração do gráfico usando Chart.js (exemplo básico)
+  // Configuração Chart.js
   const setupChart = () => {
     if (selectedCard === 'chartjs') {
       const ctx = document.getElementById('myChart');
@@ -97,7 +97,7 @@ const Home = () => {
     }
   };
 
-  // Executa a função de setup do gráfico ao selecionar 'chartjs'
+  // Executa a funcao de config do Chart.js
   useEffect(() => {
     setupChart();
   }, [selectedCard]);
@@ -106,7 +106,7 @@ const Home = () => {
     <main className="home-main">
       <section className="hero">
         <div className="hero-content">
-          <h2>Projeto de Estudo para uma Dashboard</h2>
+          <h2>Clique em um card para exibir mais informações.</h2>
         </div>
       </section>
 
@@ -131,7 +131,7 @@ const Home = () => {
   );
 };
 
-// Função utilitária para obter o ícone correspondente ao card selecionado
+// Função para obter o ícone
 const getIcon = (key) => {
   switch (key) {
     case 'react':

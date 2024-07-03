@@ -56,46 +56,6 @@ h2 {
   margin-top: 0;
 }
 
-/* Estilos para as seções */
-
-.hero {
-  background: linear-gradient(to right, #667eea, #764ba2); 
-  color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-.hero-content {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.technologies {
-  background-color: #ffffff; 
-  padding: 2rem;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.technologies-content {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.features {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-.features-content {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
 /* Estilos gerais */
 
 ul {
@@ -143,8 +103,8 @@ li {
   list-style-type: none;
   padding: 0;
   font-weight: bold;
-  font-size: 18px; /* Ajuste a fonte para harmonizar com a dashboard */
-  margin: 0; /* Remova a margem padrão */
+  font-size: 18px; 
+  margin: 0;
 }
 
 .sidebar li {
@@ -167,7 +127,7 @@ li {
 
 .sidebar a:hover {
   background-color: #f0f0f0;
-  color: #2575fc; /* Cor para harmonizar com o gradiente da dashboard */
+  color: #2575fc; 
 }
 
 .sidebar a.active {
@@ -178,7 +138,6 @@ li {
 
 
 /*HOME*/
-/* Estilos para a página Home */
 
 .home-main {
   font-family: Arial, sans-serif;
@@ -219,11 +178,11 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* fundo semi-transparente */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* garantir que o modal esteja na frente de outros elementos */
+  z-index: 1000; 
 }
 
 .modal-content {
@@ -248,4 +207,81 @@ li {
 
 .modal-close:hover {
   color: #000;
+}
+
+
+/* DASHBOARD */
+
+.dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  margin-bottom: 30px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #666;
+  font-size: 14px;
+}
+
+.loading-message,
+.error-message {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ff0000;
+}
+
+
+/*LOADING*/
+
+.loading-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Ajuste conforme necessário */
+  font-size: 100px; /* Ajuste conforme necessário */
+  padding-left: 30%;
+}
+
+.loading-icon {
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

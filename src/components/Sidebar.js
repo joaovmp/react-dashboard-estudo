@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome, FaChartBar } from 'react-icons/fa'; // Exemplo de ícones da FontAwesome
+import { FaHome, FaChartBar } from 'react-icons/fa';
 
 function Sidebar() {
   return (
